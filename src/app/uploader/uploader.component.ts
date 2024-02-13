@@ -6,8 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './uploader.component.css',
 })
 export class UploaderComponent {
-  imageurl: string =
-    'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2Fyc3xlbnwwfHwwfHx8MA%3D%3D';
+  imageurl: string = 'https://bit.ly/3OIfyYe';
 
   // UPLOAD LOGIC
   onFileUploadInputClick(event: Event) {
@@ -15,8 +14,8 @@ export class UploaderComponent {
     if (fileInputElement.files && fileInputElement.files[0]) {
       var reader = new FileReader();
       reader.onloadend = () => {
-        var baseString = reader.result as string;
-        this.imageurl = baseString;
+        var baseStringResut = reader.result as string;
+        this.imageurl = baseStringResut;
       };
       reader.readAsDataURL(fileInputElement.files[0]);
     }
