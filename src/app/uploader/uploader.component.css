@@ -1,5 +1,6 @@
 .container{
     border: 1px solid blue;
+    border-radius: 0.5rem;
 }
 .upload-btn {
     background-color: #007bff;
