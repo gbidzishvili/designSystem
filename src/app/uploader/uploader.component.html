@@ -1,6 +1,6 @@
-<img
-  [src]="imageurl"
-  alt="uploaded image"
-  style="margin-bottom: 10px; height: 200px; display: block"
-/>
-<input (change)="onFileUploadInputClick($event)" type="file" />
+<div class="container">
+  <h1>File uploader Just</h1>
+  <img [src]="imageurl" alt="uploaded image" style="width:100%;margin-bottom: 10px; height: 200px; display: block" />
+  <input (change)="onFileUploadInputClick($event)" type="file" #fileUploader hidden>
+  <button class="upload-btn" (click)="triggerFileUpload()">upload image</button>
+</div>

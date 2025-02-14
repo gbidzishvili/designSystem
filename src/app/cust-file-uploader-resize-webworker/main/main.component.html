@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>Custom File Uploader-CVA-Web Worker</h1>
+    <form [formGroup]='formGroup' action="">
+        <app-custom-uploader-cva (imageUrlUpload)="onImageUrlUpload($event)"
+            formControlName='customUploader'></app-custom-uploader-cva>
+        <img [src]="imgUrl" alt="">
+
+        <button (click)="logOnConsole()">log on console</button>
+    </form>
+</div>

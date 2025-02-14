@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-uploader',
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './uploader.component.css',
 })
 export class UploaderComponent {
+  @ViewChild('fileUploader') fileUploader!:ElementRef;
   imageurl: string = 'https://bit.ly/3OIfyYe';
 
   // UPLOAD LOGIC
@@ -19,5 +20,8 @@ export class UploaderComponent {
       };
       reader.readAsDataURL(fileInputElement.files[0]);
     }
+  }
+  triggerFileUpload(){
+    this.fileUploader.nativeElement.click()
   }
 }
